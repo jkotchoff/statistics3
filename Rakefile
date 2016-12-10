@@ -15,7 +15,7 @@ rescue Bundler::BundlerError => e
 end
 
 require 'rake'
-require 'statistics3'
+require 'juwelier'
 
 task :extension do
   Dir.chdir File.expand_path('../ext', __FILE__) do
@@ -24,7 +24,7 @@ task :extension do
   end
 end
 
-Statistics3::Tasks.new do |gem|
+Juwelier::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "statistics3"
   gem.homepage = "http://github.com/flajann2/statistics3"
@@ -44,7 +44,7 @@ Statistics3::Tasks.new do |gem|
 
   # dependencies defined in Gemfile
 end
-Statistics3::RubygemsDotOrgTasks.new
+Juwelier::RubygemsDotOrgTasks.new
 
 require 'rspec/core'
 require 'rspec/core/rake_task'
@@ -68,4 +68,3 @@ task :test => :extension do
     system "ruby -w -I lib -I ext -r test/unit -e 'Test::Unit::AutoRunner.run' test"
   end
 end
-
