@@ -1,0 +1,30 @@
+* Statistics3 -- Statistical Distributions for Ruby
+  I forked Shin-ichiro's statistics2 (sinara@blade.nagaokaut.ac.jp), work, because
+  it is in serious need of modernization for the latest Ruby, and I am 
+  currently depending on this library for my RubyNEAT work.
+
+** REQUIREMENTS
+   Ruby 2.2.2 or higher
+
+** Installation
+   #+begin_src bash
+   gem install statistics3
+   #+end-src
+
+** Usage
+*** Example:
+    #+begin_src ruby
+    require "statistics3"
+    puts Statistics3.normaldist(0.27) #=> 0.60641987319804
+    #+end_src
+
+** If you don't want to use the C extension:
+    #+begin_src ruby
+    require "statistics3/no_ext"
+    puts Statistics3.normaldist(0.27) #=> 0.606419873198039 (delta of 9.99200722162641e-16)
+    #+end_src
+
+** LICENSE:
+   MIT
+
+
