@@ -32,7 +32,11 @@ Statistics3::Tasks.new do |gem|
   gem.version = s_version
   gem.summary = %Q{Statistics3 library}
   gem.description = %Q{
-  Statistics3 is a basic Statistical package for Ruby.}
+  Statistics3 is a module that provides normal,
+  Chi-square, t- and F- probability distributions
+  for Ruby. It is a fork/continuation of Shin-ichiro Hara's original code.
+  It provides a native, compiled extension and a pure Ruby implementation.
+  }
 
   gem.email = "fred.mitchell@gmx.de"
   gem.authors = ["Fred Mitchell"]
@@ -65,4 +69,3 @@ task :test => :extension do
   end
 end
 
-task :default => :test

@@ -1,5 +1,6 @@
+require_relative 'statistics3/base'
+
 module Statistics3
-  require_relative 'statistics3/base'
   extend Base
 
   if not defined? Statistics3::NO_EXT
