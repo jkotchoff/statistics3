@@ -13,7 +13,9 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
+
 require 'rake'
+require 'statistics3'
 
 task :extension do
   Dir.chdir File.expand_path('../ext', __FILE__) do
@@ -22,31 +24,19 @@ task :extension do
   end
 end
 
-
-require 'statistics3'
 Statistics3::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
-  gem.name = "elastic-backup-2s3"
-  gem.homepage = "http://github.com/flajann2/elastic-backup-2s3"
+  gem.name = "statistics3"
+  gem.homepage = "http://github.com/flajann2/statistics3"
   gem.license = "MIT"
   gem.version = s_version
-  gem.summary = %Q{Elasticsearch to AWS S3 Backup, Snapshotting, and Restore Tool}
+  gem.summary = %Q{Statistics3 library}
   gem.description = %Q{
-  I simply want to be able to control the backup and
-  restoration of the Elasticsearch cluster to S3
-  without any fuss or having to dilly around with
-  curl -XPUTS and friends.
-
-  So here it is, and we now support Shared Volumes. See
-  the docs on the --fs flag.
-
-  There are many features I wish to add to this, and
-  if you have any suggestions, please feel free to send
-  them my way!}
+  Statistics3 is a basic Statistical package for Ruby.}
 
   gem.email = "fred.mitchell@gmx.de"
   gem.authors = ["Fred Mitchell"]
-  gem.required_ruby_version = '>= 2.0'
+  gem.required_ruby_version = '>= 2.2.2'
 
   # dependencies defined in Gemfile
 end
@@ -68,9 +58,6 @@ task :default => :spec
 
 require 'yard'
 YARD::Rake::YardocTask.new
-
-
-
 
 task :test => :extension do
   Dir.chdir File.expand_path('..', __FILE__) do
