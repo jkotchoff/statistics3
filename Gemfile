@@ -1,5 +1,9 @@
 source "https://rubygems.org"
 
+gem "semver", "~> 1"
+gem "awesome_print",  "~> 1"
+gem "colorize", "~> 0"
+
 group :development do
   gem "rspec", "~> 2"
   gem "yard", "~> 0"

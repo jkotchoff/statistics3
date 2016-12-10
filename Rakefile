@@ -22,6 +22,56 @@ task :extension do
   end
 end
 
+
+require 'statistics3'
+Statistics3::Tasks.new do |gem|
+  # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
+  gem.name = "elastic-backup-2s3"
+  gem.homepage = "http://github.com/flajann2/elastic-backup-2s3"
+  gem.license = "MIT"
+  gem.version = s_version
+  gem.summary = %Q{Elasticsearch to AWS S3 Backup, Snapshotting, and Restore Tool}
+  gem.description = %Q{
+  I simply want to be able to control the backup and
+  restoration of the Elasticsearch cluster to S3
+  without any fuss or having to dilly around with
+  curl -XPUTS and friends.
+
+  So here it is, and we now support Shared Volumes. See
+  the docs on the --fs flag.
+
+  There are many features I wish to add to this, and
+  if you have any suggestions, please feel free to send
+  them my way!}
+
+  gem.email = "fred.mitchell@gmx.de"
+  gem.authors = ["Fred Mitchell"]
+  gem.required_ruby_version = '>= 2.0'
+
+  # dependencies defined in Gemfile
+end
+Statistics3::RubygemsDotOrgTasks.new
+
+require 'rspec/core'
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec) do |spec|
+  spec.pattern = FileList['spec/**/*_spec.rb']
+end
+
+desc "Code coverage detail"
+task :simplecov do
+  ENV['COVERAGE'] = "true"
+  Rake::Task['spec'].execute
+end
+
+task :default => :spec
+
+require 'yard'
+YARD::Rake::YardocTask.new
+
+
+
+
 task :test => :extension do
   Dir.chdir File.expand_path('..', __FILE__) do
     system "ruby -w -I lib -I ext -r test/unit -e 'Test::Unit::AutoRunner.run' test"
