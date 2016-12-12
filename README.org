@@ -13,7 +13,7 @@
 ** Installation
    #+begin_src bash
    gem install statistics3
-   #+end-src
+   #+end_src
 
 ** Documentation
    Note that I've just modernized this fork, and will attempt 
