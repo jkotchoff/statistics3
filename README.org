@@ -15,6 +15,10 @@
    gem install statistics3
    #+end-src
 
+** Documentation
+   Note that I've just modernized this fork, and will attempt 
+   to add more documentation as time permits.
+
 ** Usage
 *** Example:
     #+begin_src ruby
