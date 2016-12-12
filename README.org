@@ -93,13 +93,13 @@
   
 **** Chi2-distribution
   
-    | Returns the integral of Chi-squared distribution with n degrees of freedom over [x, Infty). | chi2_x(n, x) |
-    | Returns the integral of Chi-squared distribution with n degrees of freedom over [0, x].     | chi2X_(n, x) |
+    | Integral of Chi-squared distribution with n degrees of freedom over [x, Infty). | chi2_x(n, x) |
+    | Integral of Chi-squared distribution with n degrees of freedom over [0, x].     | chi2X_(n, x) |
   
 **** Inverse of chi2-distribution
   
-    | Return the P-value of the corresponding integral. | pchi2_x(n, y) |
-    | Return the P-value of the corresponding integral. | pchi2X_(n, y) |
+    | P-value of the corresponding integral. | pchi2_x(n, y) |
+    | P-value of the corresponding integral. | pchi2X_(n, y) |
   
 **** t-distribution
   
