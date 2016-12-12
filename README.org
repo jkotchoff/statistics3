@@ -76,101 +76,61 @@
 - tdist(n, t)
 - txXX_(n, x)
 - tx__x(n, x)
-    
-*** Normal Distribution
-    Returns the integral of normal distribution over (-Infty, x].
-    def normalxXX_(z)
+
+*** Distribution     
+**** Normal Distribution
+    | Integral of normal distribution over (-Infty, x].               | normalxXX_(z) |
+    | Integral of normal distribution over [0, x].                    | normal__X_(z) |
+    | Integral of normal distribution over [x, Infty).                | normal___x(z) |
+    | Integral of normal distribution over (-Infty, -x] + [x, Infty). | normalx__x(z) |
   
-    Returns the integral of normal distribution over [0, x].
-    def normal__X_(z)
+**** Inverse of normal-distribution
   
-    Returns the integral of normal distribution over [x, Infty).
-    def normal___x(z)
+    | P-value of the corresponding integral. | pnormalxXX_(z) |
+    | P-value of the corresponding integral. | pnormal__X_(y) |
+    | P-value of the corresponding integral. | pnormal___x(y) |
+    | P-value of the corresponding integral. | pnormalx__x(y) |
   
-    Returns the integral of normal distribution over (-Infty, -x] + [x, Infty).
-    def normalx__x(z)
+**** Chi2-distribution
   
-**** inverse of normal-distribution
+    | Returns the integral of Chi-squared distribution with n degrees of freedom over [x, Infty). | chi2_x(n, x) |
+    | Returns the integral of Chi-squared distribution with n degrees of freedom over [0, x].     | chi2X_(n, x) |
   
-    Return the P-value of the corresponding integral.
-    def pnormalxXX_(z)
+**** Inverse of chi2-distribution
   
-    Return the P-value of the corresponding integral.
-    def pnormal__X_(y)
-  
-    Return the P-value of the corresponding integral.
-    def pnormal___x(y)
-  
-    Return the P-value of the corresponding integral.
-    def pnormalx__x(y)
-  
-**** chi2-distribution
-  
-    Returns the integral of Chi-squared distribution with n degrees of freedom over [x, Infty).
-    def chi2_x(n, x)
-  
-    Returns the integral of Chi-squared distribution with n degrees of freedom over [0, x].
-    def chi2X_(n, x)
-  
-**** inverse of chi2-distribution
-  
-    Return the P-value of the corresponding integral.
-    def pchi2_x(n, y)
-  
-    Return the P-value of the corresponding integral.
-    def pchi2X_(n, y)
+    | Return the P-value of the corresponding integral. | pchi2_x(n, y) |
+    | Return the P-value of the corresponding integral. | pchi2X_(n, y) |
   
 **** t-distribution
   
-    Returns the integral of normal distribution with n degrees of freedom over (-Infty, -x] + [x, Infty).
-    def tx__x(n, x)
-  
-    Returns the integral of t-distribution with n degrees of freedom over (-Infty, x].
-    def txXX_(n, x)
-  
-    Returns the integral of t-distribution with n degrees of freedom over [0, x].
-    def t__X_(n, x)
-  
-    Returns the integral of t-distribution with n degrees of freedom over [x, Infty).
-    def t___x(n, x)
+    | Integral of normal distribution with n degrees of freedom over (-Infty, -x] + [x, Infty). | tx__x(n, x) |
+    | Integral of t-distribution with n degrees of freedom over (-Infty, x].                    | txXX_(n, x) |
+    | Integral of t-distribution with n degrees of freedom over [0, x].                         | t__X_(n, x) |
+    | Integral of t-distribution with n degrees of freedom over [x, Infty).                     | t___x(n, x) |
   
 **** inverse of t-distribution
   
-    Return the P-value of the corresponding integral.
-    def ptx__x(n, y)
-  
-    Return the P-value of the corresponding integral.
-    def ptxXX_(n, y)
-  
-    Return the P-value of the corresponding integral.
-    def pt__X_(n, y)
-  
-    Return the P-value of the corresponding integral.
-    def pt___x(n, y)
+    | P-value of the corresponding integral. | ptx__x(n, y) |
+    | P-value of the corresponding integral. | ptxXX_(n, y) |
+    | P-value of the corresponding integral. | pt__X_(n, y) |
+    | P-value of the corresponding integral. | pt___x(n, y) |
   
 **** F-distribution
   
-    Returns the integral of F-distribution with n1 and n2 degrees of freedom over [x, Infty).
-    def f_x(n1, n2, x)
+    | Integral of F-distribution with n1 and n2 degrees of freedom over [x, Infty). | f_x(n1, n2, x) |
+    | Integral of F-distribution with n1 and n2 degrees of freedom over [0, x].     | fX_(n1, n2, x) |
   
-    Returns the integral of F-distribution with n1 and n2 degrees of freedom over [0, x].
-    def fX_(n1, n2, x)
+**** Inverse of F-distribution
   
+    | P-value of the corresponding integral. | pf_x(n1, n2, x) |
+    | P-value of the corresponding integral. | pfX_(n1, n2, x) |
   
-**** inverse of F-distribution
+**** Discrete distributions
+    - binX_(n, p, x)
+    - bin_x(n, p, x)
   
-    Return the P-value of the corresponding integral.
-    def pf_x(n1, n2, x)
-  
-    Return the P-value of the corresponding integral.
-    def pfX_(n1, n2, x)
-  
-    discrete distributions
-    def binX_(n, p, x)
-    def bin_x(n, p, x)
-  
-    def poissonX_(m, x)
-    def poisson_x(m, x)
+    - poissonX_(m, x)
+    - poisson_x(m, x)
 
 ** Usage
 *** Example:
