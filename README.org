@@ -3,8 +3,7 @@
   it is in serious need of modernization for the latest Ruby, and I am 
   currently depending on this library for my RubyNEAT work.
 
-  For more information (although these links may be out-of-date):
-  . http://www.matsusaka-u.ac.jp/~okumura/algo/
+  For more information (in Japanese and so use Google Translate)
   . http://www5.airnet.ne.jp/tomy/cpro/sslib11.htm
 
 ** REQUIREMENTS
