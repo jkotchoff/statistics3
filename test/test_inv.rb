@@ -2,10 +2,10 @@ $test = true
 
 require 'test/unit'
 require 'sample_tbl'
-require 'statistics2'
+require 'statistics3'
 
-class TestStatistics2Inverted < Test::Unit::TestCase
-  $mod = Statistics2
+class TestStatistics3Inverted < Test::Unit::TestCase
+  $mod = Statistics3
 
   def inv(s); "p" + s; end
 

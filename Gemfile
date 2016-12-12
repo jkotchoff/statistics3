@@ -3,13 +3,15 @@ source "https://rubygems.org"
 gem "semver", "~> 1"
 gem "awesome_print",  "~> 1"
 gem "colorize", "~> 0"
-
+gem "psych", "~> 2"
+    
 group :development do
-  gem "rspec", "~> 2"
-  gem "yard", "~> 0"
-  gem "rdoc", "~> 3"
-  gem "bundler", "~> 1"
-  gem "juwelier", "~> 2"
+  gem "rspec", "~> 3.5.0"
+  gem "test-unit"
+  gem "yard", "~> 0.7"
+  gem "rdoc", "~> 3.12"
+  gem "bundler", "~> 1.0"
+  gem "juwelier", "~> 2.1.0"
   gem "simplecov", ">= 0"
   gem 'pry',            '~> 0'
   gem 'pry-byebug',     '~> 3'

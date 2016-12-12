@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
-require "statistics2"
+require "statistics3"
 if $0 == __FILE__
   if ARGV.empty?
     puts "Example:"
@@ -8,5 +8,5 @@ if $0 == __FILE__
     puts "        #$0 pf_x 2 3 0.01"
     exit
   end
-  p Statistics2.send(ARGV[0], *ARGV[1..-1].map{|x| eval(x)})
+  p Statistics3.send(ARGV[0], *ARGV[1..-1].map{|x| eval(x)})
 end

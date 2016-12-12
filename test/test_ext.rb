@@ -3,15 +3,15 @@ $test = true
 require 'test/unit'
 require 'sample_tbl'
 
-require 'statistics2'
+require 'statistics3'
 
-class TestStatistics2 < Test::Unit::TestCase
+class TestStatistics3 < Test::Unit::TestCase
   module Base
-    extend Statistics2::Base
+    extend Statistics3::Base
   end
 
   module Extension
-    extend Statistics2::Extension
+    extend Statistics3::Extension
   end
 
   def test_normal

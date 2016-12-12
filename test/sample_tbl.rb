@@ -124,6 +124,6 @@ if $0 == __FILE__
     exit
   end
 
-  require 'statistics2'
-  show_tbl(Statistics2, *ARGV)
+  require 'statistics3'
+  show_tbl(Statistics3, *ARGV)
 end

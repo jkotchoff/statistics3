@@ -1,3 +1,4 @@
+
 require 'rubygems'
 require 'bundler'
 require 'semver'
@@ -13,10 +14,11 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
-
 require 'rake'
+
 require 'juwelier'
 
+desc 'build the C extension'
 task :extension do
   Dir.chdir File.expand_path('../ext', __FILE__) do
     system "ruby extconf.rb"
@@ -58,13 +60,14 @@ task :simplecov do
   Rake::Task['spec'].execute
 end
 
-task :default => :spec
-
-require 'yard'
-YARD::Rake::YardocTask.new
-
+desc 'run basic tests'
 task :test => :extension do
   Dir.chdir File.expand_path('..', __FILE__) do
     system "ruby -w -I lib -I ext -r test/unit -e 'Test::Unit::AutoRunner.run' test"
   end
 end
+
+task :default => :test
+
+require 'yard'
+YARD::Rake::YardocTask.new
