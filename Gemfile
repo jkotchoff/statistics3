@@ -1,12 +1,12 @@
 source "https://rubygems.org"
 
-gem "semver", "~> 1"
+gem "semver2", "~> 3"
 gem "awesome_print",  "~> 1"
 gem "colorize", "~> 0"
 gem "psych", "~> 2"
     
 group :development do
-  gem "rspec", "~> 3.5.0"
+  gem "rspec", "~> 3"
   gem "test-unit"
   gem "yard", "~> 0.7"
   gem "rdoc", "~> 3.12"
