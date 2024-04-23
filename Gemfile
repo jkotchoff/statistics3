@@ -1,22 +1,21 @@
 source "https://rubygems.org"
 
-gem "semver2", "~> 3"
-gem "awesome_print",  "~> 1"
-gem "colorize", "~> 0"
-gem "psych", "~> 2"
-    
+gem "awesome_print"
+gem "colorize"
+gem "psych"
+
 group :development do
-  gem "rspec", "~> 3"
+  gem "rspec"
   gem "test-unit"
-  gem "yard", "~> 0.7"
-  gem "rdoc", "~> 3.12"
-  gem "bundler", "~> 1.0"
-  gem "juwelier", "~> 2.1.0"
-  gem "simplecov", ">= 0"
-  gem 'pry',            '~> 0'
-  gem 'pry-byebug',     '~> 3'
-  gem 'pry-doc',        '~> 0'
-  gem 'pry-remote',     '~> 0'
-  gem 'pry-rescue',     '~> 1'
-  gem 'pry-stack_explorer', '~> 0'
+  gem "yard"
+  gem "rdoc"
+  gem "bundler"
+  gem "juwelier"
+  gem "simplecov"
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'pry-remote'
+  gem 'pry-rescue'
+  gem 'pry-stack_explorer'
 end

@@ -1,11 +1,6 @@
 
 require 'rubygems'
 require 'bundler'
-require 'semver'
-
-def s_version
-  SemVer.find.format "%M.%m.%p%s"
-end
 
 begin
   Bundler.setup(:default, :development)
@@ -31,7 +26,7 @@ Juwelier::Tasks.new do |gem|
   gem.name = "statistics3"
   gem.homepage = "http://github.com/flajann2/statistics3"
   gem.license = "MIT"
-  gem.version = s_version
+  gem.version = "0.0.6"
   gem.summary = %Q{Statistics3 library}
   gem.description = %Q{
   Statistics3 is a module that provides normal,

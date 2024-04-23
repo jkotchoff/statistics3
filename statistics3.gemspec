@@ -6,16 +6,16 @@
 # stub: ext/extconf.rb
 
 Gem::Specification.new do |s|
-  s.name = "statistics3".freeze
-  s.version = "0.0.5"
+  s.name = "statistics3"
+  s.version = "0.0.6"
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
-  s.require_paths = ["lib".freeze]
-  s.authors = ["Fred Mitchell".freeze]
+  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
+  s.require_paths = ["lib"]
+  s.authors = ["Fred Mitchell"]
   s.date = "2017-04-24"
-  s.description = "\n  Statistics3 is a module that provides normal,\n  Chi-square, t- and F- probability distributions\n  for Ruby. It is a fork/continuation of Shin-ichiro Hara's original code.\n  It provides a native, compiled extension and a pure Ruby implementation.\n  ".freeze
-  s.email = "fred.mitchell@gmx.de".freeze
-  s.extensions = ["ext/extconf.rb".freeze]
+  s.description = "\n  Statistics3 is a module that provides normal,\n  Chi-square, t- and F- probability distributions\n  for Ruby. It is a fork/continuation of Shin-ichiro Hara's original code.\n  It provides a native, compiled extension and a pure Ruby implementation.\n  "
+  s.email = "fred.mitchell@gmx.de"
+  s.extensions = ["ext/extconf.rb"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.org"
@@ -45,70 +45,30 @@ Gem::Specification.new do |s|
     "test/test_ext.rb",
     "test/test_inv.rb"
   ]
-  s.homepage = "http://github.com/flajann2/statistics3".freeze
-  s.licenses = ["MIT".freeze]
-  s.required_ruby_version = Gem::Requirement.new(">= 2.2.2".freeze)
-  s.rubygems_version = "2.6.11".freeze
-  s.summary = "Statistics3 library".freeze
+  s.homepage = "http://github.com/flajann2/statistics3"
+  s.licenses = ["MIT"]
+  s.required_ruby_version = Gem::Requirement.new(">= 2.2.2")
+  s.rubygems_version = "2.6.11"
+  s.summary = "Statistics3 library"
+
+  # s.add_runtime_dependency("psych") - where is yaml used in this project?
+  s.add_development_dependency("colorize")
+  s.add_development_dependency("awesome_print")
+  s.add_development_dependency("rspec")
+  s.add_development_dependency("test-unit")
+  s.add_development_dependency("yard")
+  s.add_development_dependency("rdoc")
+  s.add_development_dependency("bundler")
+  s.add_development_dependency("juwelier")
+  s.add_development_dependency("simplecov")
+  s.add_development_dependency("pry")
+  s.add_development_dependency("pry-byebug")
+  s.add_development_dependency("pry-doc")
+  s.add_development_dependency("pry-remote")
+  s.add_development_dependency("pry-rescue")
+  s.add_development_dependency("pry-stack_explorer")
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<semver2>.freeze, ["~> 3"])
-      s.add_runtime_dependency(%q<awesome_print>.freeze, ["~> 1"])
-      s.add_runtime_dependency(%q<colorize>.freeze, ["~> 0"])
-      s.add_runtime_dependency(%q<psych>.freeze, ["~> 2"])
-      s.add_development_dependency(%q<rspec>.freeze, ["~> 3"])
-      s.add_development_dependency(%q<test-unit>.freeze, [">= 0"])
-      s.add_development_dependency(%q<yard>.freeze, ["~> 0.7"])
-      s.add_development_dependency(%q<rdoc>.freeze, ["~> 3.12"])
-      s.add_development_dependency(%q<bundler>.freeze, ["~> 1.0"])
-      s.add_development_dependency(%q<juwelier>.freeze, ["~> 2.1.0"])
-      s.add_development_dependency(%q<simplecov>.freeze, [">= 0"])
-      s.add_development_dependency(%q<pry>.freeze, ["~> 0"])
-      s.add_development_dependency(%q<pry-byebug>.freeze, ["~> 3"])
-      s.add_development_dependency(%q<pry-doc>.freeze, ["~> 0"])
-      s.add_development_dependency(%q<pry-remote>.freeze, ["~> 0"])
-      s.add_development_dependency(%q<pry-rescue>.freeze, ["~> 1"])
-      s.add_development_dependency(%q<pry-stack_explorer>.freeze, ["~> 0"])
-    else
-      s.add_dependency(%q<semver2>.freeze, ["~> 3"])
-      s.add_dependency(%q<awesome_print>.freeze, ["~> 1"])
-      s.add_dependency(%q<colorize>.freeze, ["~> 0"])
-      s.add_dependency(%q<psych>.freeze, ["~> 2"])
-      s.add_dependency(%q<rspec>.freeze, ["~> 3"])
-      s.add_dependency(%q<test-unit>.freeze, [">= 0"])
-      s.add_dependency(%q<yard>.freeze, ["~> 0.7"])
-      s.add_dependency(%q<rdoc>.freeze, ["~> 3.12"])
-      s.add_dependency(%q<bundler>.freeze, ["~> 1.0"])
-      s.add_dependency(%q<juwelier>.freeze, ["~> 2.1.0"])
-      s.add_dependency(%q<simplecov>.freeze, [">= 0"])
-      s.add_dependency(%q<pry>.freeze, ["~> 0"])
-      s.add_dependency(%q<pry-byebug>.freeze, ["~> 3"])
-      s.add_dependency(%q<pry-doc>.freeze, ["~> 0"])
-      s.add_dependency(%q<pry-remote>.freeze, ["~> 0"])
-      s.add_dependency(%q<pry-rescue>.freeze, ["~> 1"])
-      s.add_dependency(%q<pry-stack_explorer>.freeze, ["~> 0"])
-    end
-  else
-    s.add_dependency(%q<semver2>.freeze, ["~> 3"])
-    s.add_dependency(%q<awesome_print>.freeze, ["~> 1"])
-    s.add_dependency(%q<colorize>.freeze, ["~> 0"])
-    s.add_dependency(%q<psych>.freeze, ["~> 2"])
-    s.add_dependency(%q<rspec>.freeze, ["~> 3"])
-    s.add_dependency(%q<test-unit>.freeze, [">= 0"])
-    s.add_dependency(%q<yard>.freeze, ["~> 0.7"])
-    s.add_dependency(%q<rdoc>.freeze, ["~> 3.12"])
-    s.add_dependency(%q<bundler>.freeze, ["~> 1.0"])
-    s.add_dependency(%q<juwelier>.freeze, ["~> 2.1.0"])
-    s.add_dependency(%q<simplecov>.freeze, [">= 0"])
-    s.add_dependency(%q<pry>.freeze, ["~> 0"])
-    s.add_dependency(%q<pry-byebug>.freeze, ["~> 3"])
-    s.add_dependency(%q<pry-doc>.freeze, ["~> 0"])
-    s.add_dependency(%q<pry-remote>.freeze, ["~> 0"])
-    s.add_dependency(%q<pry-rescue>.freeze, ["~> 1"])
-    s.add_dependency(%q<pry-stack_explorer>.freeze, ["~> 0"])
   end
 end
-
